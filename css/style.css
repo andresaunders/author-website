@@ -1,0 +1,490 @@
+/* VISUAL STUDIO CODE FORMATTING SHORTCUTS
+Indent: Cmd + ]
+Unindent: Cmd + [
+Format: Cmd + K, Cmd + F
+*/
+
+/* GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+/* ------ MOBILE - BASE DESIGN -------
+WIDTH: 320 - 430, HEIGHT: 640-900
+MOST COMMON: 360×640 – 17.91%
+*/
+@media (max-width: 430px){
+    .other-book {
+        max-width: 215px;
+    }
+}
+
+* {  
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+     /* force the browser to calculate the width according to the "outer"-width of the div, it means the padding will be subtracted from the width. */
+}
+
+    :root {
+        font-family: arial, sans-serif;
+    }
+
+    body, html {
+        margin: 0;
+        background: url("../images/bg-stars.jpg"); 
+        background: white;
+    }
+    
+    .container {
+    
+    }
+    
+    .head {
+        background-image: url("../images/bg-stars-blur-10.jpg");
+        background: url("../images/bg-stars.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    
+        
+        color: white;
+        font-family: 'Yellowtail', cursive;
+        text-align: center;   
+    }
+    
+    .author-title {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 3rem;
+    }
+    
+    .header-quote {
+        display: none;
+    }
+    
+    .navbar {
+        background-color: rgb(242, 243, 247);
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+        position:sticky;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .nav-link {
+        margin-top: 1rem; 
+
+        text-decoration: none;
+        color: rgb(8, 7, 75);      
+    }   
+
+    #main-heading {
+        display: none;
+    }
+    
+    .main-book {
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+        background-color: white;
+        margin: 0;
+        margin-top: 25px;
+        padding: 0;
+               
+               
+            }
+    .main-img {
+        /* height should shrink with width*/
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 360px;
+        box-shadow: 0 0.5rem 1.625rem rgba(0,0,0,.45);
+        border-style: none;
+    }
+    .main-title-description {
+        text-align: center;
+        font-size: 150%;
+    }
+    #main-book-description {
+        line-height: 140%;
+    }
+    .book-review {
+        font-style: italic;
+    }
+    .review-quote {
+       display: block;
+       margin-top: 5px;
+       font-style: italic;
+       font-weight: bold;
+    }
+
+    .purchase {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-purchase {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 0px;
+        width: 50%;
+        min-width: 140px;
+        height: 30px;
+        background-color: rgb(224, 208, 118);
+        border-radius: 4px;
+        border-width: 1px;
+        box-shadow: 0;
+        font-weight: bold;
+        text-decoration: none;
+        border-style: solid;
+        border-color: rgb(179, 179, 179);
+    }
+   
+    #main-purchase:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    #main-purchase:hover {
+        text-decoration: underline;
+        color: blue;
+    }
+
+    .section-div {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: lightgray;
+        height: 2px;
+        border-width: 0;
+        width: 70%;
+    }
+    .other-books {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .other-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .other-book {
+        width: 95%;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 1px gray solid;
+    }
+    .book-3 {
+
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .other-cover {
+        width: 100%;
+    }
+    .new {
+        background-color: yellow;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-style: italic; 
+        padding: 10px;   
+    }
+    .book-description {
+
+    }
+    .book-footer {
+
+    }
+
+    /*.welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+
+    }*/
+    .welcome-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .welcome-img-text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #welcome-header {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    #author-headshot {
+        width: 65%;
+        border-radius: 7px;
+    }
+    .welcome-text {
+       width: 75%;
+       margin-bottom: 0;
+       line-height: 140%;
+    }
+
+    h2#upcoming-books {
+        margin-top: 0;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        margin-top: 60px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #contact-heading {
+        margin-top: 0;
+        margin-bottom: 40px;
+        font-size: 1.1rem;
+    }
+
+    form {
+        width: 60%;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+    }
+
+
+
+    .form-el {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        border: 1px gray solid;
+        width: 100%;
+        height: 35px;
+        font-size: 1.1rem;
+    }
+
+    #message {
+        height: 100px;
+        font-size: 1.1rem;
+        font-family: arial, sans-serif;
+    }
+
+    footer {
+        background-color: gray;
+        padding-bottom: 30px;
+        padding-top: 30px; 
+        margin-top: 0;
+    }
+    .p-footer {
+        margin: 0;
+        text-align: center;
+        color: white;
+    }
+
+/*---- TABLETS -------
+    WIDTH: 600 - 1280, HEIGHT: 800 - 1366 
+    MOST COMMON: 768×1024 – 51.98%
+- > 601px ----*/
+@media (min-width: 500px) {
+    .main-img {
+        max-width: 400px;
+    }
+
+    .section-div {
+        width: 90%;
+    }
+
+    /*.welcome {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+    } 
+
+    #welcome-header {
+        margin-top: 0px;
+    } */
+    #author-headshot {
+        min-width: 200px;
+        width: 55%;
+        max-width: 360px;
+    }
+    .other-book {
+        max-width: 350px;
+    }
+}
+
+/*----- DESKTOP/LAPTOP - LARGE SCREEN SIZES -------
+    WIDTH: 1280 - 1920, HEIGHT: 720 - 1080
+    MOST COMMON: 1920×1080 – 19.15%
+*/
+@media (min-width: 750px) {
+    .welcome-img-text-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    #welcome-header {
+        margin-top: 0px;
+    }
+    .welcome-text-container {
+        align-items: flex-start;
+        margin-left: 5%;
+    }
+
+    #welcome-header {
+        align-self: center;
+    }
+
+    .welcome-text {
+        width: 100%;
+        max-width: 480px;
+        font-size: 1.25rem;
+    }
+    #author-headshot {
+        min-width: 280px;
+        width: 45%;
+        max-width: 300px;
+        align-self: flex-start;
+    }
+
+    #contact {
+       
+    }
+}
+/*------- Other books: col -> row -------*/
+@media(min-width: 1000px) {
+    .navbar {
+        font-size: 120%;
+    }
+    .nav-link {
+    }
+    #main-link {
+    }
+    .main-book {
+        flex-direction: row;
+        width: 100%;
+        padding-left: 12%;
+        padding-right: 10%;
+    }
+    .main-img {
+        margin-right: 50px;
+        align-self: flex-start;
+    }
+    .main-text {
+        align-self: center;
+        font-size: 120%;
+        margin-top: 10px;
+    }
+    .main-title-description{
+        text-align: justify;
+    }
+    #main-purchase {
+        align-self: center;
+        width: 50%;
+        min-width: 250px;
+    }
+    .welcome-text {
+        max-width: 650px;
+    }
+    .other-books {
+        display: flex;
+        flex-direction: column;
+    }
+    #upcoming-books {
+        margin-bottom: 50px;
+    }
+    .other-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width:100%;
+    }
+    .other-book {
+        width: 40%;
+        max-width: 380px;
+        /* margin-right: 10%; */
+        border: 1px solid gray;
+    }
+    #book-2 {
+        margin-left: 10%;
+        margin-right:10%;
+    }
+    #book-3 {
+        margin-right: 10%;
+    }
+    form {
+        width: 600px;
+    }
+}
+
+/*------- Main: col -> row -------*/
+@media (min-width: 1150px) {
+    .main-title-description {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1300px){
+    .main-text {
+        align-self: flex-start;
+    }
+    .main-img {
+
+    }
+}
+/*
+What properties should change from size to size?
+What properties should stay the same?
+text: font-family, most of layout should stay the same for modern websites: most websites are single column focused with not a lot of text and feature instructive images 
+bright backgrounds
+at most two (in most cases) or three columns on the page 
+Simplistically:
+modern layout: 
+large text
+navigation bar -> nav burger (mobile)
+bright colors (close to white)
+color change to indicate new section
+lots of images and/or simple animations
+Adjacent Icons to summarize a list of features
+Testimonials in a carousel
+non cluttered space on site
+large background img after/with header before content even begins -> first impression = image
+"picture worth a thousand words"
+consistent color schemes
+slightly rounded rectangular buttons or text containers
+footer - in columns - if little info => centered
+(img - text)
+(img
+text)
+*/
+
