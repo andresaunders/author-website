@@ -1,0 +1,309 @@
+
+/* GOOGLE FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+/*--- LARGE SCREEN SIZES > 850px ---*/
+:root {
+    --up: 1.1;
+    --down: .9;
+    --gtr: 2.0fr 0.5fr 10.0fr 5.4fr 1.4fr;
+    --img-height: 450px;
+    --img-width: calc(var(--img-height)*.66);
+    --header-color: white;
+    --header-text: #090f2f;
+}
+
+* {  /* force the browser to calculate the width according to the "outer"-width of the div, it means the padding will be subtracted from the width. */
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+body, html {
+    height: 220vh;
+    margin: 0px;
+}
+
+body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-rows: var(--gtr);
+    grid-template-areas: 
+    "header header header"
+    "nav nav nav"
+    "bookshelf bookshelf bookshelf"
+    "welcome welcome welcome"
+    "foot foot foot";
+}
+
+.head {
+    font-family: 'Yellowtail', cursive;
+    color: white;
+    background: #090f2f;
+    grid-area: header;
+    text-align: center;
+
+    background-color: var(--header-color);
+  
+    color: var(--header-text);
+
+    background-image: url("../images/bg-stars-blur-10.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+h1 {
+    /*font-style: italic; */
+    font-size: 3rem;
+}
+
+pre.space {
+    display: inline-block;
+    width: 1%;
+    margin: 0px;
+}
+
+.header-quote {
+    font-family: auto;
+    font-style: italic;
+    font-size: 1.35rem;
+}
+/*darker blue: #090f2f; */
+/*lighter blue: #0b143c; */
+
+.navbar {
+    background: #090f2f;
+    grid-area: nav;
+    text-align: center;
+    /* color testing */
+    /*background-color: var(--header-color);*/
+    background-color: rgb(242, 243, 247);
+   /* background-image: url("../images/bg-stars.jpg"); 
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; */
+   
+}
+
+.nav-link {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top:.75rem;
+    text-decoration: none;
+    color: rgb(8, 7, 75);
+    
+    /* color testing 
+    color: var(--header-text);*/
+
+}
+
+.nav-link:visited {
+    text-decoration: none;
+}
+
+.bookshelf {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "book-1 book-2 book-3";
+    color: white;
+    background-image: url("../images/bg-stars.jpg"); 
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+    grid-area: bookshelf;
+    align-items: center;
+    text-align: center;
+
+   /*background: rgb(255, 255, 255);  */
+}
+
+.book-1 {
+    color: white;
+    grid-area: book-1;
+    /*border-style:solid;
+    border-color: red; */
+
+}
+.book-2 {
+    color: white;
+
+    grid-area: book-2;
+}
+.book-3 {
+    color: white;
+
+    grid-area: book-3;
+}
+
+.book-cover {
+    /* margin-top: 50px; */
+    margin-bottom: 0px;
+    padding: 0px;
+    /*border-style:solid;
+    border-color: red; */
+}
+
+.img-cover {
+    display: block; /*  SO DIMENSIONS OF PARENT CONTAINER = DIMENSIONS OF CONTENT. by defualt img is inline-block which means that the parent container take its width and height as the minimum dimensions for the parent container
+    */
+    margin: auto; /* CENTER HORIZONTALLY */
+    height: var(--img-height);
+    width: var(--img-width);
+    /* NO BORDER 
+    border-style: solid;
+    border-color: black;
+    border-width:1px; */
+}
+
+.book-description {
+    display: none;
+    width: var(--img-width);
+    height: calc(.9* var(--img-width));
+    margin: auto; /* CENTER HORIZONTALLY */
+    padding-top: 1rem; /* EDIT: HARDCODED*/
+    padding-bottom: 1rem; /* EDIT: HARDCODED*/
+    padding-left: 1rem; /* EDIT: HARDCODED*/
+    padding-right: 1rem; /* EDIT: HARDCODED*/
+    background: white;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.book-footer {
+
+}
+
+.welcome {
+    /* VERTICAL CENTERING/ALIGNMENT OF AUTHOR-HEADSHOT IMAGE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    grid-area: welcome;
+    text-align: center;
+   
+}
+
+
+#author-headshot {
+   margin-left: 5%;
+   margin-right: 5%;
+   width: 320px;
+   height: 240px;
+}
+
+.welcome-text {
+    margin-right: 5%;
+    font-size: 2rem;
+}
+
+.foot {
+    color: white;
+    background: gray;
+    grid-area: foot;
+    text-align: center;
+}
+
+.p-footer {
+    margin-top: 1.4rem;
+    font-size: 1.5rem;
+}
+    
+/*--- MEDIUM SCREEN SIZES <850px, > S px ---*/
+@media only screen and (max-width: 850px) {
+    :root {
+        --up: 1.1;
+        --down: .9;
+        --gtr: 2.0fr 0.5fr 10.0fr 5.4fr 1.4fr;
+        --img-height: 500px;
+        --img-width: calc(var(--img-height)*.66);
+        --header-color: white;
+        --header-text: #090f2f;
+    }
+
+    body {
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: var(--gtr);
+        grid-template-areas: 
+        "header"
+        "nav"
+        "bookshelf"
+        "welcome"
+        "foot";
+    }
+    
+
+    .bookshelf {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 
+        "book-1" 
+        "book-2" 
+        "book-3";
+        color: white;
+        background-image: url("../images/bg-stars.jpg");
+        background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center;
+        grid-area: bookshelf;
+        text-align: center;
+    }
+
+    .book-cover {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .book-description {
+        width: var(--img-width);
+        height: calc(.7* var(--img-width));
+        margin: auto; /* CENTER HORIZONTALLY */
+        margin-bottom: 1rem;
+        padding-top: 1rem; /* EDIT: HARDCODED*/
+        padding-bottom: 1rem; /* EDIT: HARDCODED*/
+        padding-left: 1rem; /* EDIT: HARDCODED*/
+        padding-right: 1rem; /* EDIT: HARDCODED*/
+        background: white;
+        color: black;
+        font-size: 1.3rem;
+        display:none;
+    }
+
+    .welcome {
+        /* VERTICAL CENTERING/ALIGNMENT OF AUTHOR-HEADSHOT IMAGE */
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "author" 
+        "welcome-text";
+    
+        background: white;
+        grid-area: welcome;
+        text-align: center;
+    }
+    #author-headshot {
+        margin: auto; /* NEED TO FIX MARGIN AT SMALL LEVELS*/
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 320px;
+        height: 240px;0
+        grid-area: author;
+     }
+     
+     .welcome-text {
+         margin: auto 7% 7%;
+         font-size: 2rem;
+         grid-area: welcome-text;
+     }
+       
+}
+
+/* TODO: REDESIGN TO MAKE USE OF FLEX BOX FOR MOBILE LAYOUT*/

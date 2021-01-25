@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../../tech/websites/photo_portfolio_template"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "root"
+	}
+}
