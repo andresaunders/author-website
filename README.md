@@ -6,7 +6,10 @@
 
 Website mockup for author Dr. Saunders. 
 
-Hosted on GitHub pages to facilitate communication about website design.
+---
+
+## GitHub Pages
+<https://andresaunders.github.io/author-website/>
 
 ---
 ## Contributors
